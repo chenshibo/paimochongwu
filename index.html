@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>派摩宠物用品批发商城</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+			}
+			a{
+				text-decoration: none;
+				color: #666;
+				font-size: 12px;
+			}
+			body{
+				width: 100%;
+				font-family:"microsoft yahei";
+			}
+			ol,ul{
+				list-style: none outside none;
+				display: block;
+			}
+			ol,ul>li{
+				display: inline-block;
+			}
+			.item{
+				padding: 0;
+				position: relative;
+				z-index: 110;
+				float: left;
+				display: inline;
+				padding: 0 6px;
+				border: 1px solid #eee;
+				border-bottom: none;
+				background: #eee;
+				height: 29px;
+				line-height: 28px;
+			}
+			.checked{
+				color: #cf1f3f !important;
+				font-weight: normal;
+			}
+			.ui{
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				top: -1px;
+				background-image: url(img/ecshop-top-nav-ico.png);
+			}
+			.logo{
+				float: left;
+				width: 310px;
+				height: 60px;
+				overflow: hidden;
+				margin-right: 20px;
+			}
+			/*——————————————————————header——————————————————————————————*/
+			#header{
+				width: 100%;
+				height: 70px;
+				background-image: url(img/backimg.png);
+				background-repeat:no-repeat ;
+				background-position:50% ;
+			}
+			#new-user{
+				display: block;
+				height: 70px;
+				width: 100%;
+			}
+			/*————————————————————————nav——————————————————————————*/
+			#nav{
+				width: 100%;
+				
+				height: 30px;
+			}
+			#log-reg{
+				background: #eee;
+				height: 30px;
+				line-height: 30px;
+			}
+			#log-are{
+				width: 1190px;
+				margin: auto;
+				height: 30px;
+				font-size: 12px;
+				
+			}
+			#log-info{
+				float: left;
+			}
+			#say-hi{
+				display: inline-block;
+				margin-right: 15px;
+			}
+			#log-link{
+				display: inline-block;
+			}
+			.a-li{
+				text-decoration: none;
+				color: #606060;
+			}
+			#log-sys{
+				float: right;
+			}
+			
+			/*会员中心*/
+
+			#ui-arrow{
+				margin-left: 8px;
+				width: 5px;
+				height: 4px;
+				background-position: -2px -47px;
+				/*transition: all .3s linear;*/
+					
+			}
+			#item-sys{
+				display: none;
+				position: absolute;
+				top: 29px;
+				border: 1px solid #ddd;
+				border-top: none;
+				width: 100%;
+				text-align: left;
+				left: -1px;
+				background: #fff;
+			}
+			.dd-li{
+				padding-left: 10px;
+			}
+			/*购物车*/
+			#item-shop{
+			
+				background-position: 0 0;
+				width: 13px;
+				height: 12px;
+				margin-right: 6px;
+			}
+			#item-shopNum{
+				color: #cf1f3f;
+				padding-left: 2px;
+			}
+			/*收藏夹*/
+			#item-fav{
+				background-position: -14px 0;
+				width: 12px;
+				height: 12px;
+				
+				margin-right: 6px;
+			}
+			/*————————————————————————search——————————————————————————*/
+			#search{
+				height: 60px;
+				padding: 20px 0;
+				margin-bottom: 20px;
+				width: 1210px;
+				margin: 0 auto;
+				/*font-size: 12px;
+				line-height: 1.5;*/
+			}
+			#item-h{
+				width: 100%;
+				height: 100%;
+			}
+			#item-logo{
+				background-image: url(img/logo.png);
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			.seachbox{
+				padding: 4px 0 0;
+				float: left;
+				
+			}
+			#item-search{
+				margin-bottom: 3px;
+				z-index: 22;
+				position: relative;
+				zoom: 1;
+			}
+			#form{
+				overflow: hidden;
+			
+			}
+			#search-input{
+				
+				border: 2px solid #E4393C;
+				float: left;
+				width: 350px;
+				height: 20px;
+				padding: 5px;
+				background-color: #fff;
+				line-height: 20px;
+				color: #999;
+				font-family: arial,"\5b8b\4f53";
+				font-size: 14px;
+				text-align: left;
+			}
+			.button{
+				float: left;
+				width: 78px;
+				background: #E4393C;
+				font-size: 14px;
+				font-weight: 700;
+				color: #fff;
+				height: 34px;
+				line-height: 34px;
+				text-align: center;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			#shelper{
+				position: absolute;
+				top: 34px;
+				left: 0;
+				border: 1px solid #ddd;
+				border-top: none;
+				width: 362px;
+				background: #fff;
+				display: none;
+			}
+			#hot-words{
+				width: 420px;
+				height: 18px;
+				line-height: 18px;
+				color: #999;
+				overflow: hidden;
+				font-size: 12px;
+			}
+			#hot-words>strong{
+				float: left;
+				font-weight: 400;
+				/*line-height: 18px;
+    			color: #999;*/
+			}
+			#hot-words>a{
+				float: left;
+				margin-right: 10px;
+				color: #999;
+			}
+			/*购物车结算*/
+			#settleup{
+				float: right;
+				position: relative;
+				z-index: 9;
+				width: 126px;
+				height: 30px;
+				margin-top: 6px;
+			}
+			
+			#settleup dt a{
+				line-height: 27px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.set-dt{
+				position: absolute;
+				z-index: 3;
+				width: 74px;
+				height: 30px;
+				padding: 0 20px 0 30px;
+				border: 1px solid #EFEFEF;
+				background-position: -115px -84px;
+				background-color: #F7F7F7;
+			}
+			.sprite{
+				background-position: -59px -86px;
+				width: 20px;
+				height: 19px;
+				position: absolute;
+				top: 6px;
+				left: 5px;
+				overflow: hidden;
+				display: block;
+				text-decoration: none;
+				background-image: url(img/uielement.png);
+				/*background-repeat: repeat-x;*/
+				text-align: center;
+				cursor: pointer;
+				display: block;
+				text-decoration: none;
+			}
+			.set-dt>b{
+				top: 9px;
+				right: 4px;
+				width: 0;
+				height: 0;
+				border-style: dashed dashed dashed solid;
+				border-width: 5px;
+				border-color: transparent transparent transparent #CCC;
+				overflow: hidden;
+				position: absolute;
+			}
+			.shopping {
+				position:absolute;
+				top:-12px;
+				left:20px;
+				background-position:-183px -109px;
+				padding-left:6px;
+				color:#fff
+			}
+			#shop-num{
+				float: left;
+				display: block;
+				height: 20px;
+				padding-right: 6px;
+				background-image: url(img/uielement.png);
+				background-repeat: repeat-x;
+				background-position: 100% -86px;
+				font-size: 12px;
+			}
+			.my-center{
+				float: right;
+				position: relative;
+				z-index: 25;
+				width: 106px;
+				height: 30px;
+				margin: 6px 10px 0 0;
+			
+			}
+			.my-center dt{
+				position: absolute;
+				z-index: 10;
+				width: 50px;
+				height: 30px;
+				background: #f7f7f7;
+				padding: 0 24px 0 30px;
+				border: 1px solid #EFEFEF;
+				line-height: 27px;
+			}
+			.my-center dt b{
+				top: 12px;
+				right: 8px;
+				width: 0;
+				height: 0;
+				border-style: solid dashed dashed;
+				border-width: 5px;
+				border-color: #CCC transparent transparent;
+				overflow: hidden;
+				font-weight: bold;
+				position: absolute;
+			}
+			.my-center dd{
+				display: none;
+				position: absolute;
+				top: 30px;
+				right: 0;
+				width: 310px;
+				border: 1px solid #EFEFEF;
+				background: #fff;
+				z-index: 5;
+			}
+			
+			
+			#my-icon{
+				background-position: 0 -86px !important;
+				width: 20px;
+				height: 17px;
+				position: absolute;
+				top: 6px;
+				left: 5px;
+			}
+			.my-center .prompt{
+				padding: 6px 6px 6px 9px;
+				border-bottom: 1px solid #EEE;
+				line-height: 25px;
+				overflow: hidden;
+			}
+			.my-center .uclist{
+				width: 310px;
+				margin: 5px 0;
+				overflow: hidden;
+			}
+			#ul-list1{
+				border-right: 1px solid #F1F1F1;
+				width: 134px;
+				padding: 0 10px;
+				float: left;
+			}
+			#ul-list1 li,#ul-list2 li{
+				display: block;
+			}
+			
+			#ul-list1 li a,#ul-list2 li a{
+				color: #005EA7;
+				display: block;
+				height: 18px;
+				overflow: hidden;
+				padding: 5px;
+				text-decoration: none;
+			}
+			#ul-list2{
+				width: 134px;
+				padding: 0 10px;
+				float: left;
+			}
+			.my-center .viewlist{
+				width: 305px;
+				padding: 8px 0 8px 5px;
+				background: #F3F3F3;
+				color: #666666;
+			}
+			.my-center .smt h4{
+				float: left;
+				padding-left: 4px;
+				font-weight: 400;
+				font-size: 100%;
+			}
+			/*清除浮动*/
+			#search::after{
+				visibility: hidden;
+				display: block;
+				font-size: 0;
+				content: " ";
+				clear: both;
+				height: 0;
+			}
+			
+			/*————————————————————————页面主体——————————————————————————*/
+
+			#template-view{
+				margin-bottom: 0;
+				width: 1210px;
+				position: relative;
+				margin: 0 auto;
+				z-index: 21;
+			}
+			
+			#template-nav{
+				background: #E4393C;
+				height: 40px;
+				margin-bottom: 10px;
+			}
+			
+			#item-list{
+				width: 210px;
+				height: 40px;
+				left: 0;
+				top: 0;
+				z-index: 20;
+				position: absolute;
+			}
+			#item-list .mt{
+				width: 210px;
+				height: 40px;
+				line-height: 40px;
+				background: #E4393C;
+				font-size: 14px;
+				text-align: center;
+				cursor: pointer;
+			}
+			#item-list .mt a{
+				text-decoration: none;
+				color: #fff;
+				font-size: 14px;
+			}
+			#item-list .mc{
+				width: 206px;
+				height: 390px;
+				border: 2px solid #E4393C;
+				border-top: none;
+				padding: 10px 0 6px;
+				background: #FAFAFA;
+			}
+			#item-list .mc .item-li{
+				width: 206px;
+				height: 30px;
+			}
+			#item-list .item-li span{
+				position: absolute;
+				left: 2px;
+				width: 201px;
+				display: block;
+				z-index: 50;
+			}
+			#item-list .item-li span h3{
+				height: 28px;
+				line-height: 28px;
+				padding-left: 18px;
+				font-size: 100%;
+				font-weight: normal;
+			}
+			#item-list .item-li span h3 a{
+				color: #333;
+				font-size: 14px;
+			}
+			#item-list .item-li span i{
+				font-size: 0;
+				width: 3px;
+				height: 3px;
+				background: #a21c1d;
+				position: absolute;
+				left: 8px;
+				top: 12px;
+			}
+			#item-list .item-li span s{
+				position: absolute;
+				right: 13px;
+				top: 10px;
+				width: 6px;
+				height: 9px;
+				background-position: -43px -62px;
+				background-image: url(img/uielement.png);
+			}
+			#item-menu{
+				padding-left: 210px;
+				line-height: 40px;
+				height: 40px;
+			}
+			.item-ul{
+				display: block;
+			}
+			#item-menu .item-ul li{
+				float: left;
+			}
+			#item-menu .item-ul li a{
+				display: block;
+				padding: 0 20px;
+				height: 40px;
+				cursor: pointer;
+				text-align: center;
+				font: 700 15px/40px "microsoft yahei";
+				color: #fff;
+			}
+			#item-menu .item-ul li:nth-of-type(1){
+				background: #A40000;
+			}
+			
+			/*主页面*/
+			#main-view{
+				margin-bottom: 0;
+				width: 1210px;
+				margin: 0 auto;
+			}
+			#itemImg-box{
+				border: 1px solid #e4e4e4;
+				margin-bottom: 10px;
+			}
+			
+			#delayload{
+				background-image: url(img/Default2.gif);
+			}
+			#delayload .smallslider{
+				height: 397px;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+				z-index: 11;
+				font-size: 0;
+			}
+			#delayload .smallslider ul{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 6040px;
+				height: 100%;
+				z-index: 11;
+			}
+			#delayload .smallslider ul li{
+				float: left;
+				width: 1208px;
+				overflow: hidden;
+			}
+			#delayload .smallslider ul li img{
+				height: 397px;
+				vertical-align: top;
+				max-width: 100%;
+			}
+			#delayload .smallslider-btns{
+				position: absolute;
+				z-index: 103;
+				right: 10px;
+				bottom: 4px;
+			}
+			#delayload .smallslider-btns span{
+				background-color: #fff;
+				border: 1px solid #dcdcdc;
+				color: #9f9f9f;
+				cursor: pointer;
+				float: left;
+				font-size: 12px;
+				height: 16px;
+				line-height: 16px;
+				text-align: center;
+				width: 16px;
+			}
+			.btns-checked{
+				background-color: #c00100;
+				border: 1px solid #a00100;
+				color: #fff;
+				font-size: 13px;
+				font-weight: bold;
+			}
+			/*新品发布，猜你喜欢，热卖推荐*/
+			
+			#item-new{
+				margin-bottom: 10px;
+			}
+			#item-buytab{
+				width: 900px;
+				float: left;
+			}
+			#item-product{
+				width: 300px;
+				float: right;
+			}
+			#itembuy-outer{
+				overflow: hidden;
+				border-bottom: 1px solid #ddd;
+				position: relative;
+			}
+			#tab-arrow{
+				position: absolute;
+				z-index: 1;
+				width: 178px;
+				top: 25px;
+				left: 0;
+				height: 7px;
+				border-bottom: 2px solid #E4393C;
+				overflow: hidden;
+				text-align: center;
+			}
+			#tab-arrow b{
+				display: inline-block;
+				margin-top: -8px;
+				width: 0;
+				height: 0;
+				border-style: dashed dashed solid;
+				border-width: 10px;
+				border-color: transparent transparent #E4393C;
+				overflow: hidden;
+				font-size: 0;
+			}
+			#tab-nav{
+				width: 100%;
+				height: 32px;
+				font-family: '宋体' Arial;
+				overflow: hidden;
+				font-weight: 700;
+				border-bottom: 2px solid #aaa;
+			}
+			#tab-nav ul{
+				width: 103%;
+				height: 32px;
+			}
+			#tab-nav ul li{
+				width: 180px;
+				height: 32px;
+				line-height: 36px;
+				float: left;
+				display: block;
+				font-size: 14px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.curr-li{
+				background: #fff;
+				border-bottom: 1px solid #fff;
+				color: #E4393C;
+			}
+		</style>
+		
+	</head>
+	<body ng-app="myApp">
+		<!--注册流程连接-->
+		<header id="header">
+			<a href="" id="new-user"></a>
+		</header>
+		<!--nav-->
+		<nav id="nav">
+			<div id="log-reg">
+				<div id="log-are">
+					<div id="log-info">
+						<span id="say-hi">Hi,欢迎来到派摩商城-宠物犬猫用品批发订购！</span>
+						<div id="log-link">
+							<a href="" class="a-li">注册</a>
+							<span style="margin: 0 8px;">|</span>
+							<a href="" class="a-li checked">登录</a>
+						</div>
+					</div>
+					<div id="log-sys">
+							<ul>
+								<!--会员中心-->
+								<li class="a-li item">
+									<a href="" class="a-li">会员中心</a>
+									<span id="ui-arrow" class="ui"></span>
+									<div id="item-sys">
+										<dl>
+											<dd class="dd-li"><a href="" class="a-li">待付款</a></dd>
+											<dd class="dd-li"><a href="" class="a-li">待发货</a></dd>
+										</dl>
+									</div>
+								</li>
+								<!--购物车-->
+								<li class="a-li item" >
+									<div>
+										<s id="item-shop" class="ui"></s>
+										<a href="" class="a-li">购物车</a>
+										<span id="item-shopNum">0</span>
+									</div>
+								</li>
+								<!--收藏夹-->
+								<li class="a-li item">
+									<s id="item-fav" class="ui"></s>
+									<a href="" class="a-li">收藏夹</a>
+								</li>
+								
+								<li class="a-li item">
+									<s class="ui"></s>
+									<a href="" class="a-li">帮助中心</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</nav>	
+		
+		<!--搜索框-->
+		<div id="search">
+			<div class="logo" >
+				<a href="" title="派摩商城-宠物犬猫用品批发订购" id="item-logo"></a>
+			</div>
+			
+			<div class="seachbox">
+				<div id="item-search">
+					<form id="form">
+						<input type="" id="search-input"/>
+						<input type="hidden" id="rsword"/>
+						<a class="button">搜索商品</a>
+					</form>	
+				</div>
+				<div id="shelper"></div>
+				<div id="hot-words">
+					<strong>热门搜索 : </strong>
+					<a href="" title="丑丑">&nbsp;丑丑</a>
+					<a href="" title="福莱希">福莱希</a>
+					<a href="" title="艾尔">艾尔</a>
+					<a href="" title="petstages">petstages</a>
+					<a href="" title="孝素水">孝素水</a>
+					<a href="" title="爱旺">爱旺</a>
+					<a href="" title="富嘉利">富嘉利</a>
+				</div>
+			</div>
+				
+			<div id="settleup">
+				<dl>
+					<dt class="set-dt">
+						<s class="sprite"></s>
+						<span class="sprite shopping">
+							<span id="shop-num">0</span>
+						</span>
+						<a href="">去购物车结算</a>
+						<b></b>
+					</dt>
+				</dl>
+			</div>
+				
+			<div class="my-center">
+				<dl>
+				 	<dt class="set-dt">
+						<s class="sprite" id="my-icon"></s>
+						<a href="">我的账户</a>
+						<b></b>
+					</dt>
+					<dd style="display: none;"></dd>
+				</dl>
+				<dd>
+					<div class="prompt">
+						您好，<a href="" style="color: #005EA7;;">请登录</a>
+					</div>
+					<div class="uclist">
+						<ul id="ul-list1">
+							<li><a href="">我的收藏</a></li>
+							<li><a href="">我的积分</a></li>
+							<li><a href="">我的预存款</a></li>
+							<li><a href="">我的消息</a></li>
+						</ul>
+						<ul id="ul-list2">
+							<li><a href="">待处理订单</a></li>
+							<li><a href="">缺货登记</a></li>
+							<li><a href="">活动公告</a></li>
+							<li><a href="">我的评价</a></li>
+						</ul>
+					</div>
+					<div class="viewlist">
+						<div class="smt">
+							<h4>最近浏览商品:</h4>
+						</div>
+						<div style="clear: both;"></div>
+						<div>暂时没有浏览记录</div>
+					</div>
+				</dd>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		
+		<!--主视图nav-->
+		<div id="template-view"  ng-controller="ctrl">	
+			<div id="template-nav" >
+				<div id="item-list" >
+					<div class="cssEdit">
+						<div class="mt">
+							<a href="">全部商品分类</a>
+						</div>
+						<div class="mc">
+							<div class="item-li" ng-repeat="li in arr">
+								<span>
+									<h3><a href="">{{li.list}}</a></h3>
+									<i></i>
+									<s></s>
+								</span>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item-menu"> 
+					<ul class="item-ul" >
+						<li ng-repeat="li in linkArr"><a href="">{{li.link}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主页面-->
+		<div id="main-view">
+			<!--轮播图-->
+			<div id="itemImg-box" type="img">
+				<div id="delayload">
+					<div class="smallslider">
+						<ul>
+							<li><a href=""><img src="img/b28e4d8d41694d6d8ea5560a91650dc6.jpg" alt="" /></a></li>
+							<li><a href=""><img src="img/c9185134bb7840c889defa31a78792d8.jpg" alt="" /></a></li>
+							<li><a href=""><img src="img/1f2c080cd6f2425a831397ab4d048bcc.jpg" alt="" /></a></li>
+							<li><a href=""><img src="img/c881c8f7735442709c58e31204b9d573.jpg" alt="" /></a></li>
+							<li><a href=""><img src="img/f7f94e2b795f46198b269ff08d91b83a.jpg" alt="" /></a></li>
+						</ul>
+						<div class="smallslider-btns">
+							<span id="smallslider-btn1">1</span>
+							<span id="smallslider-btn2" style="margin-left: 4px;">2</span>
+							<span id="smallslider-btn3" style="margin-left: 4px;">3</span>
+							<span id="smallslider-btn4" style="margin-left: 4px;">4</span>
+							<span id="smallslider-btn5" style="margin-left: 4px;">5</span>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			<!--新品发布，猜你喜欢，热卖推荐-->
+			<div id="item-new">
+				<div id="item-buytab">
+					<div id="itembuy-outer">
+						<div id="tab-arrow">
+							<b></b>
+						</div>
+						<div id="tab-nav">
+							<ul>
+								<li class="curr-li">新品发布</li>
+								<li>热卖推荐</li>
+								<li>猜你喜欢</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="item-product">
+					
+				</div>
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+	</body>
+	<!--导入js插件-->
+	<script src="libs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/angular.js" type="text/javascript" charset="utf-8"></script>
+	<!--js-->
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>
