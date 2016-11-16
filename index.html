@@ -3,666 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>派摩宠物用品批发商城</title>
-		<style>
-			*{
-				margin: 0;
-				padding: 0;
-				font-size: 12px;
-			}
-			a{
-				text-decoration: none;
-				color: #666;
-				font-size: 12px;
-			}
-			body{
-				width: 100%;
-				font-family:"microsoft yahei";
-			}
-			ol,ul{
-				list-style: none outside none;
-				display: block;
-			}
-			ol,ul>li{
-				display: inline-block;
-			}
-			.item{
-				padding: 0;
-				position: relative;
-				z-index: 110;
-				float: left;
-				display: inline;
-				padding: 0 6px;
-				border: 1px solid #eee;
-				border-bottom: none;
-				background: #eee;
-				height: 29px;
-				line-height: 28px;
-			}
-			.checked{
-				color: #cf1f3f !important;
-				font-weight: normal;
-			}
-			.ui{
-				position: relative;
-				display: inline-block;
-				vertical-align: middle;
-				top: -1px;
-				background-image: url(img/ecshop-top-nav-ico.png);
-			}
-			.logo{
-				float: left;
-				width: 310px;
-				height: 60px;
-				overflow: hidden;
-				margin-right: 20px;
-			}
-			/*——————————————————————header——————————————————————————————*/
-			#header{
-				width: 100%;
-				height: 70px;
-				background-image: url(img/backimg.png);
-				background-repeat:no-repeat ;
-				background-position:50% ;
-			}
-			#new-user{
-				display: block;
-				height: 70px;
-				width: 100%;
-			}
-			/*————————————————————————nav——————————————————————————*/
-			#nav{
-				width: 100%;
-				
-				height: 30px;
-			}
-			#log-reg{
-				background: #eee;
-				height: 30px;
-				line-height: 30px;
-			}
-			#log-are{
-				width: 1190px;
-				margin: auto;
-				height: 30px;
-				font-size: 12px;
-				
-			}
-			#log-info{
-				float: left;
-			}
-			#say-hi{
-				display: inline-block;
-				margin-right: 15px;
-			}
-			#log-link{
-				display: inline-block;
-			}
-			.a-li{
-				text-decoration: none;
-				color: #606060;
-			}
-			#log-sys{
-				float: right;
-			}
-			
-			/*会员中心*/
-
-			#ui-arrow{
-				margin-left: 8px;
-				width: 5px;
-				height: 4px;
-				background-position: -2px -47px;
-				/*transition: all .3s linear;*/
-					
-			}
-			#item-sys{
-				display: none;
-				position: absolute;
-				top: 29px;
-				border: 1px solid #ddd;
-				border-top: none;
-				width: 100%;
-				text-align: left;
-				left: -1px;
-				background: #fff;
-			}
-			.dd-li{
-				padding-left: 10px;
-			}
-			/*购物车*/
-			#item-shop{
-			
-				background-position: 0 0;
-				width: 13px;
-				height: 12px;
-				margin-right: 6px;
-			}
-			#item-shopNum{
-				color: #cf1f3f;
-				padding-left: 2px;
-			}
-			/*收藏夹*/
-			#item-fav{
-				background-position: -14px 0;
-				width: 12px;
-				height: 12px;
-				
-				margin-right: 6px;
-			}
-			/*————————————————————————search——————————————————————————*/
-			#search{
-				height: 60px;
-				padding: 20px 0;
-				margin-bottom: 20px;
-				width: 1210px;
-				margin: 0 auto;
-				/*font-size: 12px;
-				line-height: 1.5;*/
-			}
-			#item-h{
-				width: 100%;
-				height: 100%;
-			}
-			#item-logo{
-				background-image: url(img/logo.png);
-				width: 100%;
-				height: 100%;
-				display: block;
-			}
-			.seachbox{
-				padding: 4px 0 0;
-				float: left;
-				
-			}
-			#item-search{
-				margin-bottom: 3px;
-				z-index: 22;
-				position: relative;
-				zoom: 1;
-			}
-			#form{
-				overflow: hidden;
-			
-			}
-			#search-input{
-				
-				border: 2px solid #E4393C;
-				float: left;
-				width: 350px;
-				height: 20px;
-				padding: 5px;
-				background-color: #fff;
-				line-height: 20px;
-				color: #999;
-				font-family: arial,"\5b8b\4f53";
-				font-size: 14px;
-				text-align: left;
-			}
-			.button{
-				float: left;
-				width: 78px;
-				background: #E4393C;
-				font-size: 14px;
-				font-weight: 700;
-				color: #fff;
-				height: 34px;
-				line-height: 34px;
-				text-align: center;
-				cursor: pointer;
-				text-decoration: none;
-			}
-			#shelper{
-				position: absolute;
-				top: 34px;
-				left: 0;
-				border: 1px solid #ddd;
-				border-top: none;
-				width: 362px;
-				background: #fff;
-				display: none;
-			}
-			#hot-words{
-				width: 420px;
-				height: 18px;
-				line-height: 18px;
-				color: #999;
-				overflow: hidden;
-				font-size: 12px;
-			}
-			#hot-words>strong{
-				float: left;
-				font-weight: 400;
-				/*line-height: 18px;
-    			color: #999;*/
-			}
-			#hot-words>a{
-				float: left;
-				margin-right: 10px;
-				color: #999;
-			}
-			/*购物车结算*/
-			#settleup{
-				float: right;
-				position: relative;
-				z-index: 9;
-				width: 126px;
-				height: 30px;
-				margin-top: 6px;
-			}
-			
-			#settleup dt a{
-				line-height: 27px;
-				text-align: center;
-				cursor: pointer;
-			}
-			.set-dt{
-				position: absolute;
-				z-index: 3;
-				width: 74px;
-				height: 30px;
-				padding: 0 20px 0 30px;
-				border: 1px solid #EFEFEF;
-				background-position: -115px -84px;
-				background-color: #F7F7F7;
-			}
-			.sprite{
-				background-position: -59px -86px;
-				width: 20px;
-				height: 19px;
-				position: absolute;
-				top: 6px;
-				left: 5px;
-				overflow: hidden;
-				display: block;
-				text-decoration: none;
-				background-image: url(img/uielement.png);
-				/*background-repeat: repeat-x;*/
-				text-align: center;
-				cursor: pointer;
-				display: block;
-				text-decoration: none;
-			}
-			.set-dt>b{
-				top: 9px;
-				right: 4px;
-				width: 0;
-				height: 0;
-				border-style: dashed dashed dashed solid;
-				border-width: 5px;
-				border-color: transparent transparent transparent #CCC;
-				overflow: hidden;
-				position: absolute;
-			}
-			.shopping {
-				position:absolute;
-				top:-12px;
-				left:20px;
-				background-position:-183px -109px;
-				padding-left:6px;
-				color:#fff
-			}
-			#shop-num{
-				float: left;
-				display: block;
-				height: 20px;
-				padding-right: 6px;
-				background-image: url(img/uielement.png);
-				background-repeat: repeat-x;
-				background-position: 100% -86px;
-				font-size: 12px;
-			}
-			.my-center{
-				float: right;
-				position: relative;
-				z-index: 25;
-				width: 106px;
-				height: 30px;
-				margin: 6px 10px 0 0;
-			
-			}
-			.my-center dt{
-				position: absolute;
-				z-index: 10;
-				width: 50px;
-				height: 30px;
-				background: #f7f7f7;
-				padding: 0 24px 0 30px;
-				border: 1px solid #EFEFEF;
-				line-height: 27px;
-			}
-			.my-center dt b{
-				top: 12px;
-				right: 8px;
-				width: 0;
-				height: 0;
-				border-style: solid dashed dashed;
-				border-width: 5px;
-				border-color: #CCC transparent transparent;
-				overflow: hidden;
-				font-weight: bold;
-				position: absolute;
-			}
-			.my-center dd{
-				display: none;
-				position: absolute;
-				top: 30px;
-				right: 0;
-				width: 310px;
-				border: 1px solid #EFEFEF;
-				background: #fff;
-				z-index: 5;
-			}
-			
-			
-			#my-icon{
-				background-position: 0 -86px !important;
-				width: 20px;
-				height: 17px;
-				position: absolute;
-				top: 6px;
-				left: 5px;
-			}
-			.my-center .prompt{
-				padding: 6px 6px 6px 9px;
-				border-bottom: 1px solid #EEE;
-				line-height: 25px;
-				overflow: hidden;
-			}
-			.my-center .uclist{
-				width: 310px;
-				margin: 5px 0;
-				overflow: hidden;
-			}
-			#ul-list1{
-				border-right: 1px solid #F1F1F1;
-				width: 134px;
-				padding: 0 10px;
-				float: left;
-			}
-			#ul-list1 li,#ul-list2 li{
-				display: block;
-			}
-			
-			#ul-list1 li a,#ul-list2 li a{
-				color: #005EA7;
-				display: block;
-				height: 18px;
-				overflow: hidden;
-				padding: 5px;
-				text-decoration: none;
-			}
-			#ul-list2{
-				width: 134px;
-				padding: 0 10px;
-				float: left;
-			}
-			.my-center .viewlist{
-				width: 305px;
-				padding: 8px 0 8px 5px;
-				background: #F3F3F3;
-				color: #666666;
-			}
-			.my-center .smt h4{
-				float: left;
-				padding-left: 4px;
-				font-weight: 400;
-				font-size: 100%;
-			}
-			/*清除浮动*/
-			#search::after{
-				visibility: hidden;
-				display: block;
-				font-size: 0;
-				content: " ";
-				clear: both;
-				height: 0;
-			}
-			
-			/*————————————————————————页面主体——————————————————————————*/
-
-			#template-view{
-				margin-bottom: 0;
-				width: 1210px;
-				position: relative;
-				margin: 0 auto;
-				z-index: 21;
-			}
-			
-			#template-nav{
-				background: #E4393C;
-				height: 40px;
-				margin-bottom: 10px;
-			}
-			
-			#item-list{
-				width: 210px;
-				height: 40px;
-				left: 0;
-				top: 0;
-				z-index: 20;
-				position: absolute;
-			}
-			#item-list .mt{
-				width: 210px;
-				height: 40px;
-				line-height: 40px;
-				background: #E4393C;
-				font-size: 14px;
-				text-align: center;
-				cursor: pointer;
-			}
-			#item-list .mt a{
-				text-decoration: none;
-				color: #fff;
-				font-size: 14px;
-			}
-			#item-list .mc{
-				width: 206px;
-				height: 390px;
-				border: 2px solid #E4393C;
-				border-top: none;
-				padding: 10px 0 6px;
-				background: #FAFAFA;
-			}
-			#item-list .mc .item-li{
-				width: 206px;
-				height: 30px;
-			}
-			#item-list .item-li span{
-				position: absolute;
-				left: 2px;
-				width: 201px;
-				display: block;
-				z-index: 50;
-			}
-			#item-list .item-li span h3{
-				height: 28px;
-				line-height: 28px;
-				padding-left: 18px;
-				font-size: 100%;
-				font-weight: normal;
-			}
-			#item-list .item-li span h3 a{
-				color: #333;
-				font-size: 14px;
-			}
-			#item-list .item-li span i{
-				font-size: 0;
-				width: 3px;
-				height: 3px;
-				background: #a21c1d;
-				position: absolute;
-				left: 8px;
-				top: 12px;
-			}
-			#item-list .item-li span s{
-				position: absolute;
-				right: 13px;
-				top: 10px;
-				width: 6px;
-				height: 9px;
-				background-position: -43px -62px;
-				background-image: url(img/uielement.png);
-			}
-			#item-menu{
-				padding-left: 210px;
-				line-height: 40px;
-				height: 40px;
-			}
-			.item-ul{
-				display: block;
-			}
-			#item-menu .item-ul li{
-				float: left;
-			}
-			#item-menu .item-ul li a{
-				display: block;
-				padding: 0 20px;
-				height: 40px;
-				cursor: pointer;
-				text-align: center;
-				font: 700 15px/40px "microsoft yahei";
-				color: #fff;
-			}
-			#item-menu .item-ul li:nth-of-type(1){
-				background: #A40000;
-			}
-			
-			/*主页面*/
-			#main-view{
-				margin-bottom: 0;
-				width: 1210px;
-				margin: 0 auto;
-			}
-			#itemImg-box{
-				border: 1px solid #e4e4e4;
-				margin-bottom: 10px;
-			}
-			
-			#delayload{
-				background-image: url(img/Default2.gif);
-			}
-			#delayload .smallslider{
-				height: 397px;
-				position: relative;
-				padding: 0;
-				margin: 0;
-				overflow: hidden;
-				z-index: 11;
-				font-size: 0;
-			}
-			#delayload .smallslider ul{
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				width: 6040px;
-				height: 100%;
-				z-index: 11;
-			}
-			#delayload .smallslider ul li{
-				float: left;
-				width: 1208px;
-				overflow: hidden;
-			}
-			#delayload .smallslider ul li img{
-				height: 397px;
-				vertical-align: top;
-				max-width: 100%;
-			}
-			#delayload .smallslider-btns{
-				position: absolute;
-				z-index: 103;
-				right: 10px;
-				bottom: 4px;
-			}
-			#delayload .smallslider-btns span{
-				background-color: #fff;
-				border: 1px solid #dcdcdc;
-				color: #9f9f9f;
-				cursor: pointer;
-				float: left;
-				font-size: 12px;
-				height: 16px;
-				line-height: 16px;
-				text-align: center;
-				width: 16px;
-			}
-			.btns-checked{
-				background-color: #c00100;
-				border: 1px solid #a00100;
-				color: #fff;
-				font-size: 13px;
-				font-weight: bold;
-			}
-			/*新品发布，猜你喜欢，热卖推荐*/
-			
-			#item-new{
-				margin-bottom: 10px;
-			}
-			#item-buytab{
-				width: 900px;
-				float: left;
-			}
-			#item-product{
-				width: 300px;
-				float: right;
-			}
-			#itembuy-outer{
-				overflow: hidden;
-				border-bottom: 1px solid #ddd;
-				position: relative;
-			}
-			#tab-arrow{
-				position: absolute;
-				z-index: 1;
-				width: 178px;
-				top: 25px;
-				left: 0;
-				height: 7px;
-				border-bottom: 2px solid #E4393C;
-				overflow: hidden;
-				text-align: center;
-			}
-			#tab-arrow b{
-				display: inline-block;
-				margin-top: -8px;
-				width: 0;
-				height: 0;
-				border-style: dashed dashed solid;
-				border-width: 10px;
-				border-color: transparent transparent #E4393C;
-				overflow: hidden;
-				font-size: 0;
-			}
-			#tab-nav{
-				width: 100%;
-				height: 32px;
-				font-family: '宋体' Arial;
-				overflow: hidden;
-				font-weight: 700;
-				border-bottom: 2px solid #aaa;
-			}
-			#tab-nav ul{
-				width: 103%;
-				height: 32px;
-			}
-			#tab-nav ul li{
-				width: 180px;
-				height: 32px;
-				line-height: 36px;
-				float: left;
-				display: block;
-				font-size: 14px;
-				text-align: center;
-				cursor: pointer;
-			}
-			.curr-li{
-				background: #fff;
-				border-bottom: 1px solid #fff;
-				color: #E4393C;
-			}
-		</style>
-		
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	</head>
 	<body ng-app="myApp">
 		<!--注册流程连接-->
@@ -825,7 +166,7 @@
 			</div>
 		</div>
 		<!--主页面-->
-		<div id="main-view">
+		<div id="main-view" ng-controller="ctrl2">
 			<!--轮播图-->
 			<div id="itemImg-box" type="img">
 				<div id="delayload">
@@ -853,7 +194,7 @@
 			<div id="item-new">
 				<div id="item-buytab">
 					<div id="itembuy-outer">
-						<div id="tab-arrow">
+						<div class="tab-arrow">
 							<b></b>
 						</div>
 						<div id="tab-nav">
@@ -863,21 +204,161 @@
 								<li>猜你喜欢</li>
 							</ul>
 						</div>
+						<!--新品推荐-->
+						<div id="tab-news">
+							<div class="hold">
+								<ul class="ul-block" >
+									<li ng-repeat="li in imgArr">
+										<div class="pic">
+											<table cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td><a href="" title={{li.title}}><img src={{li.src}}/></a></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="pname">
+											<a href="" title={{li.title}}>{{li.title}}</a>
+										</div>
+										<div class="price">
+											<span class="currentprice">
+												{{li.price}}
+											</span>
+										</div>
+									</li>
+								
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				
-				<div id="item-product">
-					
+				<div id="item-product" >
+					<div class="pro-mc">
+						<h2>精品推荐</h2>
+					</div>
+					<div class="pro-mt">
+						<div class="mt-for1" ng-repeat="li in foreArr">
+							<div class="mt-img">
+								<a href="">
+									<img src={{li.src}} alt="" title={{li.title}}/>
+								</a>
+							</div>
+							<div class="mt-name" title={{li.title}}><a href="" title={{li.title}}>{{li.title}}</a></div>
+							<div class="mt-detail">
+								{{li.detail}}
+							</div>
+						</div>
+					</div>
 				</div>
 				
+				<div style="clear: both;"></div>
+				
+				<!--1f-->
+				<div class="floor" ng-repeat="arr in floorArr">
+					<div class="floor-nav">
+						<div class="flnav-mt">
+							<h2>{{arr.name}}</h2>
+							<span class="flnav-num">{{arr.floor}}</span>
+						</div>
+						<div class="flnav-mc">
+							<ul>
+								<li ng-repeat="list in arr.nav">
+									<a href="">{{list.list}}</a>
+								</li>
+								
+							</ul>
+							<span class="flnav-img">
+								<img src={{arr.navsrc}} alt="宠物粮食" />
+							</span>	
+						</div>
+						
+					</div>
+					<div class="floor-detail">
+						<div class="fldet-outer">
+							<div class="tab-arrow">
+								<b></b>
+							</div>
+							<div class="fldet-nav">
+								<ul>
+									<li class="">{{arr.title}}</li>
+								</ul>
+							</div>
+							
+							<div class="fldet-img">
+								<div class="fldetimg-hold">
+									<ul class="fldet-ul">
+									<li ng-repeat="list in arr.detailli">
+											<div class="fldetul-pic">
+												<table cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td><a href=""><img src={{list.src}}/></a></td>
+													</tr>
+												</tbody>
+											</table>
+											</div>
+											<div class="pname">
+											<a href="" title={{list.title}}>{{list.title}}</a>
+											</div>
+											<div class="price">
+												<span class="currentprice">
+													{{list.price}}
+												</span>
+											</div>
+										</li>
+									</ul>
+									<div class="fldet-smallslider">
+										<ul>
+											<li ng-repeat=" list in arr.detailimg">
+												<a href=""><img src={{list.src}} alt="" /></a>
+											</li>
+											
+										</ul>
+										<div class="fldet-ctrl">
+											<a href=""></a>
+											<a href=""></a>
+											<a href=""></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="floor-icon">
+						<div class="floor-smt">
+							<a href="">更多品牌
+							<span>>></span>
+							</a>
+						</div>
+						<div class="floor-smc">
+							<ul>
+								<li ng-repeat="list in arr.iconimg">
+									<span>
+										<a href=""><img src={{list.src}} alt="" /></a>
+									</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="floor-adimg">
+						<div>
+							<a href="">
+							<img src={{arr.admsrc}} alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+				
+
 				
 			</div>
 			
-			
-			
-			
-			
-			
+
 			
 		</div>
 		
