@@ -315,7 +315,7 @@ app.controller("ctrl2",function ($scope) {
 			navsrc:"img/1f62400f3f114b28a7c7f56bf03300e0.jpg"
 		},
 		{
-			floor:"1F",
+			floor:"4F",
 			name:"宠物粮食",
 			title:"大牌",
 			nav:[
@@ -382,7 +382,7 @@ app.controller("ctrl2",function ($scope) {
 			navsrc:"img/958ae43cb4d341908f3db8efd4dcb2ff.jpg"
 		},
 		{
-			floor:"1F",
+			floor:"5F",
 			name:"宠物粮食",
 			title:"大牌",
 			nav:[
