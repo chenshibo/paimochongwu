@@ -11,7 +11,7 @@
 			<a href="" id="new-user"></a>
 		</header>
 		<!--nav-->
-		<nav id="nav">
+		<nav id="nav" ng-controller="navctrl">
 			<div id="log-reg">
 				<div id="log-are">
 					<div id="log-info">
@@ -25,7 +25,7 @@
 					<div id="log-sys">
 							<ul>
 								<!--会员中心-->
-								<li class="a-li item">
+								<li class="a-li item" id="log-vip">
 									<a href="" class="a-li">会员中心</a>
 									<span id="ui-arrow" class="ui"></span>
 									<div id="item-sys">
@@ -36,20 +36,20 @@
 									</div>
 								</li>
 								<!--购物车-->
-								<li class="a-li item" >
-									<div>
+								<li class="a-li item changeIcon" >
+									
 										<s id="item-shop" class="ui"></s>
 										<a href="" class="a-li">购物车</a>
 										<span id="item-shopNum">0</span>
-									</div>
+									
 								</li>
 								<!--收藏夹-->
-								<li class="a-li item">
+								<li class="a-li item changeIcon">
 									<s id="item-fav" class="ui"></s>
 									<a href="" class="a-li">收藏夹</a>
 								</li>
 								
-								<li class="a-li item">
+								<li class="a-li item changeIcon">
 									<s class="ui"></s>
 									<a href="" class="a-li">帮助中心</a>
 								</li>
@@ -60,7 +60,7 @@
 		</nav>	
 		
 		<!--搜索框-->
-		<div id="search">
+		<div id="search" ng-controller="loginctrl">
 			<div class="logo" >
 				<a href="" title="派摩商城-宠物犬猫用品批发订购" id="item-logo"></a>
 			</div>
@@ -106,7 +106,7 @@
 						<a href="">我的账户</a>
 						<b></b>
 					</dt>
-					<dd style="display: none;"></dd>
+				
 				</dl>
 				<dd>
 					<div class="prompt">
@@ -138,6 +138,8 @@
 		</div>
 		<div style="clear: both;"></div>
 		
+		
+		
 		<!--主视图nav-->
 		<div id="template-view"  ng-controller="ctrl">	
 			<div id="template-nav" >
@@ -149,11 +151,39 @@
 						<div class="mc">
 							<div class="item-li" ng-repeat="li in arr">
 								<span>
-									<h3><a href="">{{li.list}}</a></h3>
+									<h3><a href=""title={{li.list}} >{{li.list}}</a></h3>
 									<i></i>
 									<s></s>
 								</span>
-								<div></div>
+								<div class="item-div">
+									<div class="item-sub">
+										<dl class="item-fore" ng-repeat="nav in li.contents">
+											<dt>
+												<a href="">{{nav.navname}}</a>
+											</dt>
+											<dd >
+												<em ng-repeat="navlist in nav.navlist">
+													<a href="">{{navlist.name}}</a>
+												</em>
+											</dd>
+										</dl>
+									</div>
+									
+									<div class="item-right">
+										<dl>
+											<dt>推荐品牌</dt>
+											<dd>
+												<ul>
+													<li ng-repeat="recomod in li.recomod">
+														<a href="">{{recomod.reconame}}</a>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+										
+									</div>
+									
+								</div>
 							</div>
 						</div>
 					</div>
@@ -179,11 +209,11 @@
 							<li><a href=""><img src="img/f7f94e2b795f46198b269ff08d91b83a.jpg" alt="" /></a></li>
 						</ul>
 						<div class="smallslider-btns">
-							<span id="smallslider-btn1">1</span>
-							<span id="smallslider-btn2" style="margin-left: 4px;">2</span>
-							<span id="smallslider-btn3" style="margin-left: 4px;">3</span>
-							<span id="smallslider-btn4" style="margin-left: 4px;">4</span>
-							<span id="smallslider-btn5" style="margin-left: 4px;">5</span>
+							<span id="smallslider-btn1" date-num ="1">1</span>
+							<span id="smallslider-btn2" style="margin-left: 4px;" date-num="2">2</span>
+							<span id="smallslider-btn3" style="margin-left: 4px;" date-num="3">3</span>
+							<span id="smallslider-btn4" style="margin-left: 4px;" date-num="4">4</span>
+							<span id="smallslider-btn5" style="margin-left: 4px;" date-num="5">5</span>
 							
 						</div>
 					</div>
@@ -316,11 +346,11 @@
 											</li>
 											
 										</ul>
-										<div class="fldet-ctrl">
+										<!--<div class="fldet-ctrl">
 											<a href=""></a>
 											<a href=""></a>
 											<a href=""></a>
-										</div>
+										</div>-->
 									</div>
 								</div>
 							</div>
@@ -353,14 +383,91 @@
 						</div>
 					</div>
 				</div>
-				
-
-				
+			</div>
+		</div>
+		
+		
+		<footer id="footer" ng-controller="footerCtrl">
+			<div class="footer-list">
+				<div class="footer-server">
+					<dl ng-repeat="list in footerArr">
+						<dt>{{list.title}}</dt>
+						<dd ng-repeat="li in list.contents">
+							<a href="">{{li.server}}</a>	
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</footer>
+		
+		
+		<div id="bottom">
+			<div class="bottom-menu"></div>
+			<div class="bottom-nav">
+				<span>友情链接:</span>
+				<a href="">E宠商城</a>
+				<b>|</b>
+				<a href="">爱狗网</a>
+				<b>|</b>
+				<a href="">中国宠物网</a>
+				<b>|</b>
+				<a href="">更多...</a>
+				<b>|</b>
 			</div>
 			
-
+			<div class="bottom-info">
+				<div><br /></div>
+				<p>@&nbsp;2010～2016 all rights reserved&nbsp;</p>
+				<div>本站的顾客和商家个人信息将决不会泄漏给其他任何机构和个人</div>
+				<p>有任何购物问题请联系我们在线客服 | 电话：028-84119705 | 工作时间：周一至周六 8:00－18:00</p>
+				<p><br /></p>
+				<p><br /></p>
+				<div>上海淘宠网络科技有限公司</div>
+				<div><a href="">沪ICP备16029982号-1</a></div>
+			</div>
+			
+			
 			
 		</div>
+		
+		<a  id="backtotop" href="#"></a>
+		<div id="online-server"></div>
+		<div id="server-box">
+			<div id="server-header">
+				<div id="server-mt">
+					<a href="" title="关闭">关闭</a>
+				</div>
+				<div id="server-time">
+					<h3>在线时间</h3>
+					<div class="oday">
+						<span>周一至周六</span>
+					</div>
+					<div class="otime">
+						<span>8:30-17:30</span>
+					</div>
+				</div>
+			</div>
+			<div id="server-body">
+				<div class="chat">
+					<div class="chat-t">QQ在线客服</div>
+					<ul>
+						<li>
+							<a href="">
+								<img src="img/qqonline.png" alt="" />
+								<span>成都服宋</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="server-footer">
+				<div id="footer-hotline">
+					<span>028-84119705</span>
+				</div>
+				<div id="footer-close">关闭在线客服</div>
+			</div>
+		</div>
+		
 		
 	</body>
 	<!--导入js插件-->
