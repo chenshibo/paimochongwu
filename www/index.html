@@ -5,7 +5,7 @@
 		<title>派摩宠物用品批发商城</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	</head>
-	<body ng-app="myApp">
+	<body ng-app="myApp" ng-controller="viewctrl">
 		<!--注册流程连接-->
 		<header id="header">
 			<a href="" id="new-user"></a>
@@ -17,9 +17,9 @@
 					<div id="log-info">
 						<span id="say-hi">Hi,欢迎来到派摩商城-宠物犬猫用品批发订购！</span>
 						<div id="log-link">
-							<a href="" class="a-li">注册</a>
+							<a href="regist.html" class="a-li">注册</a>
 							<span style="margin: 0 8px;">|</span>
-							<a href="" class="a-li checked">登录</a>
+							<a href="login.html" class="a-li checked">登录</a>
 						</div>
 					</div>
 					<div id="log-sys">
@@ -110,8 +110,9 @@
 				</dl>
 				<dd>
 					<div class="prompt">
-						您好，<a href="" style="color: #005EA7;;">请登录</a>
+						您好，<a href="login.html" style="color: #005EA7;">请登录</a>
 					</div>
+
 					<div class="uclist">
 						<ul id="ul-list1">
 							<li><a href="">我的收藏</a></li>
@@ -243,7 +244,7 @@
 											<table cellpadding="0" cellspacing="0">
 												<tbody>
 													<tr>
-														<td><a href="" title={{li.title}}><img src={{li.src}}/></a></td>
+														<td><a href="" title={{li.title}}><img src="{{li.src}}"/></a></td>
 													</tr>
 												</tbody>
 											</table>
@@ -324,7 +325,7 @@
 												<table cellpadding="0" cellspacing="0">
 												<tbody>
 													<tr>
-														<td><a href=""><img src={{list.src}}/></a></td>
+														<td><a href=""><img src="{{list.src}}"/></a></td>
 													</tr>
 												</tbody>
 											</table>
@@ -344,7 +345,6 @@
 											<li ng-repeat=" list in arr.detailimg">
 												<a href=""><img src={{list.src}} alt="" /></a>
 											</li>
-											
 										</ul>
 										<!--<div class="fldet-ctrl">
 											<a href=""></a>
@@ -431,11 +431,11 @@
 		</div>
 		
 		<a  id="backtotop" href="#"></a>
-		<div id="online-server"></div>
+		<div id="online-server" ng-click="showKF()"></div>
 		<div id="server-box">
 			<div id="server-header">
 				<div id="server-mt">
-					<a href="" title="关闭">关闭</a>
+					<a href="" title="关闭" ng-click="closeKF()">关闭</a>
 				</div>
 				<div id="server-time">
 					<h3>在线时间</h3>
@@ -464,15 +464,15 @@
 				<div id="footer-hotline">
 					<span>028-84119705</span>
 				</div>
-				<div id="footer-close">关闭在线客服</div>
+				<div id="footer-close" ng-click="closeKF()">关闭在线客服</div>
 			</div>
-		</div>
 		
 		
 	</body>
 	<!--导入js插件-->
 	<script src="libs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="libs/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 	<!--js-->
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	

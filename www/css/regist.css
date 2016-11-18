@@ -1,0 +1,332 @@
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font: 12px/1.5 "Microsoft Yahei", Verdana, sans-serif;
+			color: #333;
+		}
+		#user-login{
+			width: 980px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		
+		#login-header{
+			height: 165px;
+		
+		}	
+		#login-header .login-warp{
+			height: 100%;
+			display: inline-block;
+		}		
+			
+		#login-header .logo-warp a{
+			display: inline-block;
+			text-decoration: none;
+			vertical-align: middle;
+			line-height: 165px;
+		}		
+		#login-header .logo-warp a img{
+			vertical-align: middle;
+			max-height: 120px;
+			
+		}		
+			
+		#login-warp{
+			margin-bottom: 80px;
+			overflow: hidden;
+		}	
+			
+		#login-banner{
+			
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 550px;
+			height: 450px;
+			float: right;
+			overflow: hidden;
+			background-image: url(../img/c4db3f095b124c3badd7fee966a5e6aa.jpg);
+		}
+			
+		#login-box{
+			width: 429px;
+			float: right;
+			padding-top: 5px;
+			background-image: url(../img/login-box-topbg.png);
+		}	
+			
+		#logbox-con{
+			height: 442px;
+			padding: 0 5px;
+			background-image: url(../img/login-box-bg.png);
+		}	
+
+		#logbox-bg{
+			height: 5px;
+			overflow: hidden;
+			background-image: url(../img/login-box-botbg.png);
+		}
+
+		#logbox-form{
+			padding-bottom: 25px;
+			background-color: #fff;
+		}
+			
+		#dialog-form{
+			margin-left: auto;
+			margin-right: auto;
+			width: 330px;
+		}
+
+		#dialog-form .logbox-hd{
+			line-height: 40px;
+			padding: 8px 0;
+			overflow: hidden;
+		}
+
+		#dialog-form .logbox-hd h3{
+			font-size: 18px;
+			font-weight: normal;
+			float: left;
+		}
+		#dialog-form .logbox-field{
+			margin-top: 5px;
+			clear: both;
+			overflow: hidden;
+			position: relative;
+		}
+
+
+		#dialog-form .logbox-field input{
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			font-size: 13px;
+			padding: 10px 10px 10px 40px;
+			width: 270px;
+			background: url(../img/icon-user.png) 10px 	no-repeat;
+		}
+
+		#dialog-form .logbox-field > p > span{
+			padding-left: 16px;
+			display: none;
+		}
+		
+		#password,#confrim {
+			background: url(../img/icon-key.png) 10px no-repeat !important; 
+		}
+		
+		
+				
+		#regist div span{
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 18px;
+		}
+			
+		#regist div	span.icon-ok-sign{
+				color: green;
+		}
+			
+		#regist div	span.icon-remove-sign{
+				color: red;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+
+		#loginbtn{
+			border: none;
+			background: url(../img/login-btn.png) !important;
+			width: 328px !important;
+			line-height: 39px ;
+			font-size: 16px !important;
+			color: #fff ;
+			text-align: center ;
+			letter-spacing: .2em ;
+			height: 39px;
+			cursor: pointer;
+			background-position: 0 0;
+			padding: 0 !important;
+		}
+		
+		
+		
+		
+		/*footer*/
+		
+		#footer{
+			margin: 30px 0px 10px;
+			text-align: center;
+		}
+		#footer a{
+			text-decoration: none;
+			color: #333;
+		}
+		
+
+		
+		
+		
+		
+
+		/*客服*/
+		#online-server{
+			position: fixed;
+			right: 10px;
+			top: 120px;
+			display: block;
+			z-index: 999;	
+			background-position: left -188px;
+			width: 33px;
+			height: 94px;
+			cursor: pointer;
+			background-image: url(../img/os_style_red.png);	
+		}
+		
+		
+		#server-box{
+			position: fixed;
+			right: 10px;
+			top: 120px;
+			display: none;
+			width: 144px;
+			z-index: 999;
+		}
+		
+		#server-box #server-header{
+			font: 12px/1.5 宋体,sans-serif;
+		}
+		#server-box #server-header #server-mt{
+			width: 144px;
+			height: 35px;
+			position: relative;
+			background-image: url(../img/os_style_red.png);
+			background-position: 0px 0px;
+			
+		}
+		#server-box #server-header #server-mt a{
+			cursor: pointer;
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 8px;
+			right: 11px;
+			text-indent: -999em;
+			
+		}
+		
+		#server-box #server-header #server-time{
+			border-left: 1px solid #b20012;
+			border-right: 1px solid #b20012;
+			background-position: 0px -35px;
+			background-image: url(../img/os_style_red.png);
+			width: 142px;
+			height: 60px;
+			line-height: 20px;
+			font-size: 12px;
+			overflow: hidden;
+		}
+			
+		#server-box #server-header #server-time h3{
+			font-size: 100%;
+			font-weight: normal;
+			color: #607db8;
+			padding-left: 70px;
+		}
+		#server-time .oday{
+			padding-left: 70px;
+			color: #e25656;
+			line-height: 20px;
+			font-size: 12px;
+		}
+		#server-time .otime{
+			padding-left: 70px;
+			color: #e25656;
+			line-height: 20px;
+			font-size: 12px;
+		}
+		
+		#server-box #server-body{
+			border: 1px solid #b20012;
+			border-top: none;
+			background: #fff;
+			width: 142px;
+			overflow: hidden;		
+		}
+			
+		#server-box #server-body .chat{
+			border-top: 1px solid #ccdbed;
+			margin-top: -1px;
+			padding-bottom: 10px;	
+		}
+		#server-box #server-body .chat .chat-t{
+			line-height: 40px;
+			text-align: center;
+			color: #000;
+		}
+		#server-box #server-body .chat ul{
+			padding: 0px 6px;
+		}
+		#server-box #server-body .chat ul li{
+			height: 22px;
+			display: block;
+			margin-bottom: 5px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		#server-box #server-body .chat ul li img{
+			margin: 0;
+			vertical-align: middle;
+			border: none;
+		}
+		#server-box #server-body .chat ul li span{
+			padding-left: 4px;
+			color: #3473a7;
+			font-size: 12px;			
+		}
+		
+		#server-footer #footer-hotline{
+			
+			background-position: 0px -95px;
+			border: 1px solid #b20012;
+			border-top: none;
+			color: #fff;
+			background-image: url(../img/os_style_red.png);
+			width: 142px;
+			height: 60px;
+			font-family: Arial;
+			font-size: 14px;
+			overflow: hidden;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		#server-footer #footer-hotline span{
+			font-family: Arial;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			color: #fff;
+			display: block;
+			padding-top: 32px;	
+		}
+			
+		#server-footer #footer-close{
+			background-position: 0px -156px;
+			height: 31px;
+			line-height: 31px;
+			color: #fff;
+			background-image: url(../img/os_style_red.png);
+			width: 144px;
+			text-align: center;
+			cursor: pointer;
+		}

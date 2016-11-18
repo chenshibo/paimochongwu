@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>会员登录_派摩商城-宠物犬猫用品批发订购</title>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<title>注册会员_派摩商城-宠物犬猫用品批发订购</title>
+		<link rel="stylesheet" type="text/css" href="css/regist.css"/>
 		<link href="Font-Awesome/css/font-awesome.css" rel="stylesheet"/>
 	</head>
-	<body ng-app="loginApp" ng-controller="loginctrl">
+	<body ng-app="registApp" ng-controller="registctrl">
 		
 		<div id="login-form" >
 			<div id="user-login">
@@ -20,14 +20,14 @@
 				</div>
 				<div id="login-warp">
 					<div id="login-banner"></div>
-					<div id="login-box">
+					<div id="login-box"  >
 						<div id="logbox-con">
 							<div id="logbox-form">
 								<div id="dialog-form">
 									<div class="logbox-hd">
-										<h3>会员登录</h3>
+										<h3>注册会员</h3>
 									</div>
-									<form id="login" novalidate name="myForm" ng-submit="login()">	
+									<form id="regist"  novalidate name="myForm" ng-submit="regist()">
 										<div class="logbox-field">
 											<input type="text" id="username" name="username" placeholder="输入用户名/手机号码" required ng-minlength="4" ng-model="username" title="用户名请选择手机号或者不低于4位账号"/>
 											<span ng-show="myForm.username.$valid&&myForm.username.$dirty" class="icon-ok-sign"></span>
@@ -38,17 +38,23 @@
 											<span ng-show="myForm.password.$valid&&myForm.password.$dirty" class="icon-ok-sign"></span>
 											<span ng-show="myForm.password.$invalid&&myForm.password.$dirty" class="icon-remove-sign" title="请输入6位以上密码"></span>
 										</div>
-									
 										<div class="logbox-field">
-											<span id="login-rember">
-												<label for="cbRember">
-													<input type="checkbox" id="cbRember" name="cbRember"/>记住用户名
-												</label>
-											</span>
-											<a href="">忘记密码?</a>
+											<input type="password"  name="confrim"  id="confrim" placeholder="请确认密码" autocomplete="off" required ng-model="confrim"/>	
+											<span ng-show="password==confrim&&myForm.confrim.$dirty" class="icon-ok-sign"></span>
+											<span ng-show="password!=confrim&&myForm.confrim.$dirty" class="icon-remove-sign" title="两次密码输入不一致"></span>
 										</div>
 										<div class="logbox-field">
-											<input type="submit" name="loginbtn" id="loginbtn" value="立即登录" ng-disabled="myForm.$invalid"/>
+											<input type="email" id="mail" name="mail" placeholder="请输入您的邮箱地址" ng-model="mail"/>
+											<span ng-show="myForm.mail.$valid&&myForm.mail.$dirty" class="icon-ok-sign"></span>
+											<span ng-show="myForm.mail.$invalid&&myForm.mail.$dirty" class="icon-remove-sign" title="邮箱格式错误"></span>
+										</div>
+										<div class="logbox-field">
+											<input type="text" id="tel" name="tel" placeholder="请输入您的手机号码" pattern="^1[3|5|7|8]\d{9}$" ng-model="tel" required=""/>
+											<span ng-show="myForm.tel.$valid&&myForm.tel.$dirty" class="icon-ok-sign"></span>
+											<span ng-show="myForm.tel.$invalid&&myForm.tel.$dirty" class="icon-remove-sign" title="手机号码格式错误"></span>
+										</div>
+										<div class="logbox-field">
+											<input type="submit" name="loginbtn" id="loginbtn" value="立即注册" ng-disabled="myForm.$invalid||psw!=confirm"/>
 										</div>
 									</form>	
 								</div>
@@ -113,5 +119,5 @@
 	</body>
 	<script src="libs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/regist.js" type="text/javascript" charset="utf-8"></script>
 </html>

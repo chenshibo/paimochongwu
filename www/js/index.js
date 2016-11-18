@@ -54,18 +54,13 @@ app.factory("lbimgClick",[function () {
 					},100)
 				}
 			}	
-				for (var i = 0;i<5;i++){
-					
-					$("#delayload .smallslider-btns span")[i].onmouseleave = function (e) {
-						console.log(111)
-						clearTimeout();
-					}
+			for (var i = 0;i<5;i++){
+				$("#delayload .smallslider-btns span")[i].onmouseleave = function (e) {
+					clearTimeout();
 				}
+			}
 		}		
 }])
-
-
-
 
 
 
@@ -116,6 +111,41 @@ app.factory("changeIcon",[ function() {
 	}
 	
 }])
+
+
+app.controller("viewctrl",["$scope","reload",function($scope,reload){
+			
+		$scope.showKF = function () {
+			$("#server-box").css("display","block");
+		}	
+	
+		$scope.closeKF = function () {
+			$("#server-box").css("display","none");
+		}
+		
+		reload();
+			
+}]);
+
+//当页面加载时
+app.factory("reload", [ function() {
+	
+	return function  () {
+		console.log(document.cookie);
+		if (document.cookie) {
+			
+			
+			
+		} else{
+			
+		}
+	}
+	
+}])
+
+
+
+
 
 
 
@@ -1105,26 +1135,5 @@ app.controller("footerCtrl",function ($scope) {
 
 
 
-
-
-
-//客服
-$("#online-server").click(function () {
-	$("#server-box").css("display","block")
-})
-$("#server-mt a").click(function () {
-	$("#server-box").css("display","none")
-})
-$("#footer-close").click(function () {
-	$("#server-box").css("display","none")
-})
-
-
-
-
-
-
-
-app.run()
 
 
