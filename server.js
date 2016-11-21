@@ -50,9 +50,8 @@ app.post("/regist",function(req,res){
 			var u = new User({
 				username:req.body.username,
 				password:req.body.password,
-				mail:String,
-				tel:String,
-				token:String
+				mail:req.body.mail,
+				tel:req.body.tel00
 			});
 			
 			u.save(function(err){

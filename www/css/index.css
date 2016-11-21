@@ -118,6 +118,12 @@
 			display: inline-block;
 		}
 		
+		#login-username{
+			display: none;
+			display: inline-block;
+			
+		}
+		
 		.a-li {
 			text-decoration: none;
 			color: #606060;
@@ -745,6 +751,12 @@
 			overflow: hidden;
 			
 		}
+		
+		
+		#prompt-username{
+			display: none;
+		}
+		
 		
 		
 		

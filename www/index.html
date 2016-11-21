@@ -21,6 +21,11 @@
 							<span style="margin: 0 8px;">|</span>
 							<a href="login.html" class="a-li checked">登录</a>
 						</div>
+						<div id="login-username">
+							<span>{{username}}</span>
+							<span style="margin: 0 8px;">|</span>
+							<a href="" class="a-li" ng-click="logout()">退出</a>
+						</div>
 					</div>
 					<div id="log-sys">
 							<ul>
@@ -37,11 +42,9 @@
 								</li>
 								<!--购物车-->
 								<li class="a-li item changeIcon" >
-									
 										<s id="item-shop" class="ui"></s>
-										<a href="" class="a-li">购物车</a>
-										<span id="item-shopNum">0</span>
-									
+										<a href="shopCard.html" class="a-li">购物车</a>
+										<span id="item-shopNum">0</span>					
 								</li>
 								<!--收藏夹-->
 								<li class="a-li item changeIcon">
@@ -62,7 +65,9 @@
 		<!--搜索框-->
 		<div id="search" ng-controller="loginctrl">
 			<div class="logo" >
-				<a href="" title="派摩商城-宠物犬猫用品批发订购" id="item-logo"></a>
+				<a href="" title="派摩商城-宠物犬猫用品批发订购" id="item-logo">
+					<img src="img/7cbf8d477e9640eaa3fc6eefd188bcb9.png"/>
+				</a>
 			</div>
 			
 			<div class="seachbox">
@@ -93,7 +98,7 @@
 						<span class="sprite shopping">
 							<span id="shop-num">0</span>
 						</span>
-						<a href="">去购物车结算</a>
+						<a href="shopCard.html">去购物车结算</a>
 						<b></b>
 					</dt>
 				</dl>
@@ -109,10 +114,16 @@
 				
 				</dl>
 				<dd>
-					<div class="prompt">
+					<div class="prompt" id="prompt-login">
 						您好，<a href="login.html" style="color: #005EA7;">请登录</a>
 					</div>
-
+					
+					<div class="prompt" id="prompt-username">
+						{{username}} <a href="" ng-click="logout()">退出</a>
+					</div>
+					
+					
+					
 					<div class="uclist">
 						<ul id="ul-list1">
 							<li><a href="">我的收藏</a></li>
